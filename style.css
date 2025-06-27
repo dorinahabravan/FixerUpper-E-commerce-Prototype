@@ -1,0 +1,78 @@
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-container a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.nav-container a:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #777;
+}
+/* style.css */
+section.bg-primary {
+    background: linear-gradient(135deg, #004080, #007BFF);
+}
+
+#hero-offer {
+    transition: opacity 0.5s ease-in-out;
+}
+/* Hero Section Background Image */
+.hero-section {
+    background-image: url('assets/images/hero-tech.jpeg'); /* <-- your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* so the text stays on top of the overlay */
+}
+.hero-section .container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* custom.css */
+
+.btn-custom {
+    background-color: #b5883f;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #a87730;
+    color: white;
+}
+
