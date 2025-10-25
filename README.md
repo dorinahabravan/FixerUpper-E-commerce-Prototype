@@ -81,9 +81,8 @@ Create a new database called fixerupper_db
 
 Import database/schema.sql
 
-Run the project:
+Run the project.
 
-Visit http://localhost/FixerUpper-E-commerce-Prototype/index.php
 
 🧑‍💻 Author
 
