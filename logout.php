@@ -1,5 +1,5 @@
 <?php
-// Destroy all session data to log out the user
+// This code is for securely ending the session to prevent hijacking
 session_start();
 session_destroy();
 

@@ -85,29 +85,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="alert alert-danger"><?= $error ?></div>
     <?php endforeach; ?>
 
-    <form method="POST">
+    <form method="POST" style="max-width: 800px; margin: 20px auto;  padding: 30px; border-radius: 10px;">
         <div class="mb-3">
             <label>Name</label>
-            <input type="text" name="name" value="<?= htmlspecialchars($user['name']) ?>" class="form-control" required>
+            <input type="text" name="name" value="<?= htmlspecialchars($user['name']) ?>" class="form-control rounded-pill" required>
         </div>
 
         <div class="mb-4">
             <label>Email</label>
-            <input type="email" name="email" value="<?= htmlspecialchars($user['email']) ?>" class="form-control" required>
+            <input type="email" name="email" value="<?= htmlspecialchars($user['email']) ?>" class="form-control rounded-pill" required>
         </div>
 
         <hr>
         <h5>Change Password</h5>
         <div class="mb-3">
             <label>Current Password</label>
-            <input type="password" name="current_password" class="form-control" placeholder="Enter current password">
+            <input type="password" name="current_password" class="form-control rounded-pill" placeholder="Enter current password">
         </div>
         <div class="mb-3">
             <label>New Password</label>
-            <input type="password" name="new_password" class="form-control" placeholder="Enter new password">
+            <input type="password" name="new_password" class="form-control rounded-pill" placeholder="Enter new password">
         </div>
 
-        <button type="submit" class="btn btn-primary">Update Account</button>
+       <div class="text-center mt-3">
+  <button type="submit" class="btn btn-primary rounded-pill px-4" style="background-color:#b5883f;">Update Account</button>
+</div>
     </form>
 </div>
 

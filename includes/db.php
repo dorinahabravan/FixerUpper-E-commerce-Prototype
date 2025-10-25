@@ -1,10 +1,10 @@
 <?php
 
-// includes/db.php
+
 $host = 'localhost';
 $db   = 'fixerupper_db';
 $user = 'root';
-$pass = ''; // change this if your MySQL has a password
+$pass = ''; 
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -20,3 +20,10 @@ try {
     exit('Database connection failed: ' . $e->getMessage());
 }
 ?>
+
+
+
+
+
+
+

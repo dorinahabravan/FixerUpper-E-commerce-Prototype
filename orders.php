@@ -21,7 +21,7 @@ $orders = $stmt->fetchAll();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<?php require 'templates/header.php'; ?>
+<?php require_once 'templates/header.php'; ?>
 <div class="container py-5">
     <h2>My Orders</h2>
 
@@ -43,7 +43,7 @@ $orders = $stmt->fetchAll();
                         <tr>
                             <td><?= $order['id'] ?></td>
                             <td><?= number_format($order['total'], 2) ?></td>
-                            <!-- 🛡️ XSS Protection: escape user input before displaying -->
+                            <!--  XSS Protection: escape user input before displaying -->
                             <td><?= htmlspecialchars($order['address']) ?></td>
                             <td><?= $order['created_at'] ?></td>
                         </tr>

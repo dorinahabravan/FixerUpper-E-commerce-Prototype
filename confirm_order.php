@@ -1,16 +1,14 @@
 <?php
 session_start();
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
+
 
 
 require_once 'includes/db.php';
 
-session_start();
+
 require_once 'includes/db.php';
 
-// ✅ HARD BLOCK if user not logged in
+// HARD BLOCK if user not logged in
 if (!isset($_SESSION['user_id'])) {
     echo "<div style='padding:2rem; background:#f8d7da; color:#721c24; font-family:sans-serif;'>
             <h2>You must be logged in to confirm an order.</h2>
@@ -85,11 +83,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($cart)) {
 </head>
 <body>
 <?php require 'templates/header.php'; ?>
-<div class="container py-5">
+<div class="text-center py-5" style="max-width: 1000px; margin: 20px auto;  padding: 30px; border-radius: 10px;">
     <?php if (isset($confirmation)): ?>
         <h2 class="mb-4">✅ Thank You for Your Order!</h2>
         <p>Your order has been placed successfully. We will contact you shortly by email.</p>
-        <a href="index.php" class="btn btn-primary mt-3">Continue Shopping</a>
+        <a href="index.php" class="btn btn-primary mt-3 rounded-pill" style="background-color:#b5883f ;">Continue Shopping</a>
     <?php endif; ?>
 </div>
 <?php require 'templates/footer.php'; ?>
